@@ -32,7 +32,7 @@ export default defineConfig({
         '@vueuse/core',
       ],
       dts: './auto-imports.d.ts',
-      dirs: ['src/composables'],
+      dirs: ['src/composables', 'src/stores'],
       eslintrc: {
         enabled: true, // <-- this
       },
