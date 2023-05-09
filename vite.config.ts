@@ -9,6 +9,7 @@ import VueMacros from 'unplugin-vue-macros/vite'
 import MetaLayouts from 'vite-plugin-vue-meta-layouts'
 import Pages from 'vite-plugin-pages'
 import { VitePWA } from 'vite-plugin-pwa'
+import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,6 +31,7 @@ export default defineConfig({
         // presets
         'vue',
         'vue-router',
+        'vue-i18n',
         '@vueuse/core',
       ],
       dts: './auto-imports.d.ts',
@@ -76,6 +78,12 @@ export default defineConfig({
           },
         ],
       },
+    }),
+    VueI18n({
+      runtimeOnly: true,
+      compositionOnly: true,
+      fullInstall: true,
+      include: [resolve(__dirname, 'locales/**')],
     }),
   ],
   test: {
