@@ -18,9 +18,7 @@ defineOptions({
         Vitesse
       </a>
     </p>
-    <button icon-btn @click="toggleDark()">
-      <div i="carbon-sun dark:carbon-moon" />
-    </button>
+    <button i="carbon-sun dark:carbon-moon" @click="toggleDark()" />
   </div>
 </template>
 
