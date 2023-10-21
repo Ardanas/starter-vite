@@ -5,7 +5,6 @@ import Vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import VueMacros from 'unplugin-vue-macros/vite'
 import MetaLayouts from 'vite-plugin-vue-meta-layouts'
 import Pages from 'vite-plugin-pages'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -45,12 +44,6 @@ export default defineConfig({
     MetaLayouts(),
     Pages({
       dirs: 'src/pages',
-    }),
-    VueMacros({
-      plugins: {
-        // vue: Vue(),
-        // vueJsx: VueJsx(), // 如果需要
-      },
     }),
     VitePWA({
       registerType: 'autoUpdate',
