@@ -44,7 +44,7 @@ export default defineConfig({
     Components({ dirs: ['src/components/'], dts: true }),
     MetaLayouts(),
     Pages({
-      dirs: 'src/views',
+      dirs: 'src/pages',
     }),
     VueMacros({
       plugins: {
